@@ -1,0 +1,75 @@
+/*=================================================
+	GENERAL MODULES
+==================================================*/
+
+/*=======================================
+  BUTTONS
+========================================*/
+
+.btn{
+  width:50%;
+  margin:0;
+  padding: 2% 3%;
+  @include inline-block-fix();
+  text-align: center;
+  float:left;
+  @include transition(all, 0.5s, ease);
+  &:hover{
+    @include transition(all, 0.5s, ease);
+  }
+  
+}
+
+/*=============================
+  BUTTON TYPES
+==============================*/
+
+.download-btn{
+  color:$white;
+  background-color:$gray-6;
+  &:hover{
+    color:$white;
+    background-color:$gray-4;
+  }
+}
+
+
+.social-btn{
+  color:$white;
+  background-color:$gray-5;
+  &:hover{
+    color:$white;
+    background-color:$gray-4;
+  }
+}
+
+
+/*=======================================
+  CODE VIEW THEMES
+========================================*/
+
+.code{
+  font-family: $code;
+  white-space:pre;
+  overflow: auto;
+  @include font-size(1.6);
+  p{
+    margin-bottom:2%;
+  }
+  @media (max-width: 500px) {
+    @include font-size(1.2);
+  }
+}
+
+.tag{
+  color:$pink;
+}
+
+.tag-punc{
+  color:$orange;
+}
+
+.comment{
+  color:$gray-2;
+}
+

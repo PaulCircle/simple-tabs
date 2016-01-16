@@ -1,0 +1,87 @@
+/*=================================================
+  Variables
+==================================================*/
+
+$white: #fff;
+//number denotes shade
+$gray-0: #F7F7F7;
+$gray-1: #E9E9E9;
+$gray-2: #E0E0E0;
+$gray-3: #454545;
+$gray-4: #363636;
+$gray-5: #252525;
+$gray-6: #111111;
+$black: #000000;
+$orange: #f59c8f;
+$pink: #edbdc8;
+
+//fonts
+$sans: 'Source Sans Pro', sans-serif;
+$code: 'Source Code Pro', "Courier New", Courier, monospace;
+
+
+/*=================================================
+	Mixins
+==================================================*/
+
+@mixin clear-fix{
+  &:before, &:after {
+    content: "\0020";
+    height: 0;
+    display: block;
+    overflow: hidden;
+  }
+  &:after {
+      clear: both;
+  }
+}
+
+@mixin inline-block-fix {
+  display: inline-block; /* For normal, healthy browsers */
+  /*white-space: nowrap;*/
+
+  *display: inline;
+    zoom: 1; 
+    * html & { /* for IE6 */
+      display: inline;
+    }
+   
+    *+html & { /* for IE7 */
+      display: inline;
+    }
+}
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+//border radius
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+@mixin box-shadow($hor,$vert,$blur,$spread,$color, $inset: false){
+  @if $inset{
+    -webkit-box-shadow:$hor $vert $blur $spread $color $inset;
+    -moz-box-shadow:$hor $vert $blur $spread $color $inset;
+    box-shadow:$hor $vert $blur $spread $color $inset;
+  }
+  @else{
+    -webkit-box-shadow:$hor $vert $blur $spread $color;
+    -moz-box-shadow:$hor $vert $blur $spread $color;
+    box-shadow:$hor $vert $blur $spread $color 
+  }
+}

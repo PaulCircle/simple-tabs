@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+
+		<title>Simple Tabs</title>
+
+		<meta name="viewport" content="width=device-width" /><!--sets the viewport for mobile phones-->
+		<meta charset="UTF-8">
+		<meta name="author" content="Paul Circle" />
+		<meta name="description" content="Simple Tabs" />
+		<meta name="robots" content="index, follow"/>
+
+		<link rel="icon" href="images/favicon.ico">
+		<!--style sheets-->
+		<link rel="stylesheet" href="css/main.css">
+
+		<!--fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Source+Sans+Pro:400,300,700,200' rel='stylesheet' type='text/css'>
+		
+
+	</head>
+
+	<body>
+		<div class="page-border"></div>
+
+		<div class="tabs"><!--start tabs-->
+
+			<div class="downloads"><!--start downloads-->
+
+			<a href="downloads/" class="btn download-btn">CodePen</a>
+			<a href="#" class="btn social-btn">GitHub</a>
+
+			</div><!--end downloads-->
+
+			<nav class="tabs-nav">
+
+				<ul>
+					<li data-tab="1"><span class="icon-info"></span></li>
+					<li data-tab="2"><span class="icon-gear"></span></li>
+					<li data-tab="3"><span class="icon-code"></span></li>
+				</ul>
+
+			</nav> 
+
+			<div class="tab-container"><!--start tab container-->
+
+				<div class="tab-content" data-tab="1"><!--start tab content-->
+
+					<h2 class="tagline">SIMPLE TABS</h2>
+
+					<p>Simple Tabs is a light-weight  navigation widget, built with css, html, and jQuery. Feel free to use this in your next web project. Simple Tabs is free for personal and commercial use. No attribution required!</p>
+
+				</div><!--end tab content-->
+
+				<div class="tab-content" data-tab="2"><!--start tab content-->
+
+					<h2>Set Up</h2>
+
+					<p>Link to the simple tabs script at the bottom of your project. Make sure you have the latest version of jQuery also included.</p>
+
+					<pre>
+						<code class="code"><!--start code-->
+	<span class="comment">&lt;!--Call the most recent version of jQuery with Simple Tabs--&gt;</span>
+	<span class="tag">&lt;script src=</span><span class="tag-punc">"http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"</span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+	<span class="tag">&lt;script src=</span><span class="tag-punc">"js/simple-tabs.js"</span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+	<span class="tag">&lt;/body&gt;</span></code><!--end code-->
+					</pre>
+
+				</div><!--end tab content-->
+
+				<div class="tab-content" data-tab="3"><!--start tab content-->
+
+					<h2>HTML</h2>
+
+					<p>Simple Tabs uses data attributes as the basis for its functionality. Each tab is bound to its own content area by using an identical data attribute identifier.</p>
+
+				<pre><code class="code">
+	<span class="comment">&lt;!--List items are bound to tab content by data attribute--&gt;</span>
+	<span class="tag">&lt;nav class="</span><span class="tag-punc">tabs-nav"</span><span class="tag">&gt;</span>
+		<span class="tag">&lt;ul&gt;</span>
+			<span class="tag">&lt;li data-tab=</span><span class="tag-punc">"1"</span><span class="tag">&gt;</span>TAB 1</span><span class="tag">&lt;/span&gt;</span><span class="tag">&lt;/li&gt;</span>
+			<span class="tag">&lt;li data-tab=</span><span class="tag-punc">"2"</span><span class="tag">&gt;</span>TAB 2</span><span class="tag">&lt;/span&gt;</span><span class="tag">&lt;/li&gt;</span>
+			<span class="tag">&lt;li data-tab=</span><span class="tag-punc">"3"</span><span class="tag">&gt;</span>TAB 3</span><span class="tag">&lt;/span&gt;</span><span class="tag">&lt;/li&gt;</span>
+		<span class="tag">&lt;/ul &gt;</span>
+	<span class="tag">&lt;/nav&gt;</span>
+	<span class="comment">&lt;!--Each content section corresponds with it's matching data attribute--&gt;</span>
+	<span class="tag">&lt;div class=</span><span class="tag-punc">"tab-content"</span> <span class="tag">data-tab=</span><span class="tag-punc">"1"</span><span class="tag">&gt;</span>
+		<span class="tag">&lt;h2&gt;</span>TAB 1<span class="tag">&lt;/h2&gt;</span>
+		<span class="tag">&lt;p&gt;</span>Content goes here.<span class="tag">&lt;/p&gt;</span>
+	<span class="tag">&lt;/div&gt;</span>
+	<span class="tag">&lt;div class=</span><span class="tag-punc">"tab-content"</span> <span class="tag">data-tab=</span><span class="tag-punc">"2"</span><span class="tag">&gt;</span>
+		<span class="tag">&lt;h2&gt;</span>TAB 2<span class="tag">&lt;/h2&gt;</span>
+		<span class="tag">&lt;p&gt;</span>Content goes here.<span class="tag">&lt;/p&gt;</span>
+	<span class="tag">&lt;/div&gt;</span>
+	<span class="tag">&lt;div class=</span><span class="tag-punc">"tab-content"</span> <span class="tag">data-tab=</span><span class="tag-punc">"3"</span><span class="tag">&gt;</span>
+		<span class="tag">&lt;h2&gt;</span>TAB 3<span class="tag">&lt;/h2&gt;</span>
+		<span class="tag">&lt;p&gt;</span>Content goes here.<span class="tag">&lt;/p&gt;</span>
+	<span class="tag">&lt;/div&gt;</span>
+					</code></pre>
+
+			</div><!--end tab container-->
+
+		</div><!--end tabs-->
+
+		<!--scripts-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="js/min/plugins-min.js"></script>
+		<script src="js/min/simple-tabs-min.js"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,169 @@
+/*=================================================
+  PAGE BORDER TRIANGLE BG
+==================================================*/
+
+.page-border{
+  width: 100%;
+  min-height: 690px;  
+  padding-left:25%;
+  //padding-bottom: 55%;
+  overflow: hidden;
+  position:absolute;
+  &:after{
+    content: "";
+    position:absolute;
+    width: 0;
+    height: 0;
+    margin-left:-500px;
+    border-style: solid;
+    border-width: 800px 1445px 0 0;
+    border-color: #ffffff transparent transparent transparent;
+    opacity: 0.1;
+  }
+  @media (max-width: 800px) {
+    display:none;
+  }
+}
+
+/*=================================================
+  DOWNLOADS
+==================================================*/
+
+.downloads, .tabs{
+  @include box-shadow(0, 8px, 50px, 1px, rgba(5,5,5,.3));
+}
+
+
+.downloads{
+  position:absolute;
+  left:30px;
+  top: -40px;
+  width:666px;
+  margin:auto;
+  z-index: 9999999999;
+  @include box-shadow(0, 20px, 50px, 1px, rgba(5,5,5,.5));
+  @include clear-fix;
+  @media (max-width: 800px) {
+    position:static;
+    width:100%;
+  }
+}
+
+/*=================================================
+  TABS
+==================================================*/
+
+.gradient{
+  position:absolute;
+  width:100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,000000+51,000000+100&0.22+0,0+100 */
+  background: -moz-linear-gradient(-45deg,  rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.11) 50%, rgba(0,0,0,0.11) 51%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  rgba(255,255,255,0.22) 0%,rgba(255,255,255,0.11) 50%,rgba(0,0,0,0.11) 51%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  rgba(255,255,255,0.22) 0%,rgba(255,255,255,0.11) 50%,rgba(0,0,0,0.11) 51%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#38ffffff', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+/*=======================================
+  TAB BODY
+========================================*/
+
+.tabs{
+  position:absolute;
+  left:0;
+  right:0;
+  width:726px;
+  margin: 145px auto;
+  z-index: 99999;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  @media (max-width: 800px) {
+    position: static;
+    width:90%;
+    margin:4% auto;
+  }
+}
+
+/*=======================================
+  TAB NAVIGATION
+========================================*/
+
+.tabs-nav{
+  ul{
+    margin:0;
+    padding:0;
+
+  }
+  li{
+    width:242px;
+    padding: 8% 3% 3% 3%;
+    @include inline-block-fix();
+    @include font-size(1.4);
+    text-align:center;
+    text-transform:uppercase;
+    color:$gray-2;
+    cursor:pointer;
+    margin-left:-5px;
+    margin-bottom:0;
+    border-right: 1px solid $gray-1;
+    border-bottom: 1px solid $gray-1;
+    background-color:$gray-0;
+    @include transition(all, 0.2s, ease-in-out);
+    &:hover{
+      color:$pink;
+      background-color:$white;
+    }
+    &:first-child{
+      margin-left:0;
+      border-left:0;
+    }
+    &:last-child{
+      border-right:0;
+      border-left:0;
+    }
+  }
+  @media (max-width: 800px) {
+    li{
+      width:33.34%;
+      padding:0;
+    }
+  }
+}
+
+/*=======================================
+  TAB CONTENT
+========================================*/
+
+.tab-container{
+  width:100%;
+  padding:6%;
+  background-color:$white;
+  
+}
+
+/*=======================================
+  TAGLINE
+========================================*/
+
+.tagline{
+  position:relative;
+  margin-bottom:6%;
+  &:after{
+    content:"";
+    position:absolute;
+    bottom:-15px;
+    left:0;
+    height:5px;
+    width:105px;
+    background-color:$pink;
+  }
+  @media (max-width: 700px) {
+    margin-bottom:8%;
+  }
+  @media (max-width: 500px) {
+    margin-bottom:12%;
+  }
+
+}
+

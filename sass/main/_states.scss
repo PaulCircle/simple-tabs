@@ -1,0 +1,44 @@
+/*=======================================
+  GENERAL STATES
+========================================*/
+
+.block{
+  display:block;
+}
+
+.active,li.active{
+  color:$pink;
+  border-bottom: 1px solid $white;
+  background-color:$white;
+}
+
+.hide{
+  display:none;
+}
+
+.show{
+  display:block;
+}
+
+/*=======================================
+  POSITIONING
+========================================*/
+
+.fixed{
+  position:fixed;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
+.top{
+  top:0;
+}
+
+
+

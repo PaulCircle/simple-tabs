@@ -1,0 +1,147 @@
+/*=================================================
+  Global
+==================================================*/
+
+/*=======================================
+  Box Padding
+========================================*/
+
+*, *:before, *:after {
+  /* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
+  -webkit-box-sizing: border-box; 
+
+  /* Firefox (desktop or Android) 28- */
+  -moz-box-sizing: border-box;
+
+  /* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */
+  box-sizing: border-box;
+}
+
+/*=======================================
+  BODY
+========================================*/
+
+html {
+
+  font-size: 62.5%;
+}
+
+body{
+  position:relative;
+  height:100%;
+  font-size:24px; /*set default size for REM*/
+  font-family: $sans;
+  font-weight:100;
+  line-height:1.6em;
+  color:$gray-3;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ef6b55+0,dd6379+100 */
+  background: #ef6b55; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ef6b55 0%, #dd6379 100%)fixed; /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ef6b55 0%,#dd6379 100%)fixed; /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #ef6b55 0%,#dd6379 100%)fixed; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef6b55', endColorstr='#dd6379',GradientType=0 )fixed; /* IE6-9 */
+}
+
+a {
+  text-decoration:none;
+  @include transition(all, 0.5s, ease);
+  
+}
+
+p,ul{
+  margin: 0 0 3% 0;
+  line-height: 1.8em;
+  &:last-child{
+    margin-bottom:0;
+  }
+  @media (max-width: 868px) {
+    margin: 0 0 5% 0;
+  }
+}
+
+p{
+  @include font-size(2.0);
+  @media (max-width: 500px) {
+    @include font-size(1.6);
+  }
+}
+
+ul{
+  padding:0;
+}
+
+li{
+  margin-bottom:1%;
+}
+
+strong{
+  font-weight: 600;
+}
+
+
+ul{
+  list-style:none;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0 0 2% 0;
+  padding:0;
+  font-family: $sans;
+  text-transform: uppercase;
+
+}
+
+pre{
+  margin:6% 0 0 0;
+  display:block;
+  word-break: normal;
+  background-color: $gray-4;
+  color:$gray-1;
+}
+
+/*=============================
+  HEADINGS
+==============================*/
+
+h1{
+  @include font-size(3.6);
+}
+h2{
+  @include font-size(3.2);
+}
+h3{
+  @include font-size(2.8);
+}
+h4{
+  @include font-size(2.2);
+}
+h5{
+  @include font-size(1.8);
+}
+h6{
+  @include font-size(1.6);
+}
+
+h1,h2,h3,h4,h5,h6{
+  line-height:1.3em;
+}
+
+/*=============================
+  INPUTS
+==============================*/
+
+input, textarea{
+  border: none;
+}
+
+/*=============================
+  IMG
+==============================*/
+
+img{
+  min-width: 1%;
+  max-width:100%;
+}
